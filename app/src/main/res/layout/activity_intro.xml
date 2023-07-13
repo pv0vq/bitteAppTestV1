@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    >
+
+
+    <!--
+    RelativeLayout 상대적 레이아웃 선언
+    android:layout_above: 기준 뷰의 윗부분에 배치
+    android:layout_below: 기준 뷰의 아랫부분에 배치
+    android:layout_toLeftOf: 기준 뷰의 왼쪽에 배치
+    android:layout_toRightOf: 기준 뷰의 오른쪽에 배치
+    -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/intro"/>
+
+
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:text="@string/main_text"
+        android:textSize="29dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        />
+
+    <TextView
+        android:id="@+id/subText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainText"
+        android:text="@string/sub_text"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+       />
+
+    <TextView
+        android:id="@+id/delayTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_horizontal"
+        android:text="더 알아보기"/>
+
+    <Button
+        android:id="@+id/button_show_toast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/delayTextView"
+        android:background="@drawable/round_button"
+        android:text="@string/intro_button_text"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
